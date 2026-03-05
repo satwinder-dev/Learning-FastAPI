@@ -1,0 +1,32 @@
+[
+    {
+        "id" : 1,
+        "name": "Satwinder",
+        "tech": ["React", "Next.js"],
+        "city": "Patiala"
+    },
+    {
+        "id" : 2,
+        "name": "Rahul",
+        "tech": ["Python", "FastAPI"],
+        "city": "Delhi"
+    },
+    {   
+        "id" : 3,
+        "name": "Ankit",
+        "tech": ["Node.js", "Express"],
+        "city": "Mumbai"
+    },
+    {
+        "id" : 4,
+        "name": "Priya",
+        "tech": ["Angular", "TypeScript"],
+        "city": "Bangalore"
+    },
+    {
+        "id" : 5,
+        "name": "Simran",
+        "tech": ["Django", "PostgreSQL"],
+        "city": "Chandigarh"
+    }
+]

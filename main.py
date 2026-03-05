@@ -67,3 +67,13 @@ def delete_dev( dev_id : int):
            dc.pop(index)
            print(deleted)
            return deleted
+       
+@app.patch("/dev/{dev_id}")
+def update_dev(dev_id : int , updated_fields: dict):
+    for dev in dc :
+        if dev["id"] == dev_id:
+            dev.update(updated_fields)
+            updated = dev
+            print(updated)
+            return updated
+    
