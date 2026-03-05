@@ -31,6 +31,12 @@ dc = [
         "name": "Simran",
         "tech": ["Django", "PostgreSQL"],
         "city": "Chandigarh"
+    },
+    {
+        "id" : 5,
+        "name": "Simran",
+        "tech": ["Django", "PostgreSQL"],
+        "city": "Chandigarh"
     }
 ]
 
