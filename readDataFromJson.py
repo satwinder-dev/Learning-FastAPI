@@ -12,6 +12,10 @@ def load_data():
 # def read_data():
 #     data = load_data()
 #     return data 
+def save_data(data):
+    with open("devs.json", "w") as f:
+        json.dump(data, f , indent=4)
+        
 dc = load_data()
 
 @app.get("/dev")
@@ -29,6 +33,7 @@ def get_dev(dev_id:int):
 @app.post("/dev")
 def create_dev(dev : dict):
     dc.append(dev)
+    save_data(dc)
     return {"message":"dev added", "data":dev}
 
 @app.put("/dev/{dev_id}")
@@ -37,6 +42,7 @@ def update(dev_id:int , updated_dev : dict):
         if dev["id"] == dev_id:
             dc[index] = updated_dev
             print(update)
+            save_data(dc)
             return {"message" : "dev updated", "data" : updated_dev}
         
 @app.delete("/dev/{dev_id}")
@@ -46,4 +52,6 @@ def delete_dev( dev_id : int):
            deleted= dc[index]
            dc.pop(index)
            print(deleted)
+           save_data(dc)
            return deleted
+       

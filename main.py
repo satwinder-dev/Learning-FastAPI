@@ -82,4 +82,3 @@ def update_dev(dev_id : int , updated_fields: dict):
             updated = dev
             print(updated)
             return updated
-    
